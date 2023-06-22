@@ -1,0 +1,14 @@
+body { 
+    background-color: maroon;
+    text-align: center;
+    color: #ffffff;
+}
+button {
+    color: black;
+    background-color:rgb(0, 238, 255);
+    border-radius: 20%;
+    border-style:double;
+    size: 50px;
+    border-width: 5px;
+}
+
