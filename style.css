@@ -1,7 +1,7 @@
 body { 
     background-color: maroon;
-    text-align: center;
     color: #ffffff;
+    
 }
 button {
     color: black;
@@ -11,4 +11,7 @@ button {
     size: 50px;
     border-width: 5px;
 }
-
+img {
+    width: 500px;
+    height: 300px;
+}

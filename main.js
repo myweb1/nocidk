@@ -15,7 +15,19 @@ objectapi.onresult = function (t) {
     savemic = t.results[0][0].transcript
     document.getElementById("textiaria").innerHTML = ""
     document.getElementById("textiaria").innerHTML = savemic
-    talk()
+    if (savemic == "Toma una selfie"){
+        talk()
+        setTimeout(() => {
+            photo()   
+        },1000 );
+        
+    }
+    
+}
+function photo() {
+    Webcam.snap(function (g) {
+        document.getElementById("fotodellapipol").innerHTML = "<img src='"+g+"'>"
+    })
 }
 function talk() {
     apitexttospeech = window.speechSynthesis
@@ -25,8 +37,9 @@ function talk() {
     Webcam.attach(spaceocamera)
 }
 Webcam.set({
-    width:200,
-    height:200,
+    width:500,
+    height:500,
     image_format:"png",
-    png_quality:1
+    png_quality:90
+    
 })
